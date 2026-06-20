@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Estates with Hemanth</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-layout{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:60px;
+    align-items:start;
+  }
+  @media (max-width:860px){
+    .contact-layout{ grid-template-columns:1fr; }
+  }
+  .field{ margin-bottom:22px; }
+  .field label{
+    display:block;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--stone);
+    margin-bottom:9px;
+    font-weight:600;
+  }
+  .field input,
+  .field select,
+  .field textarea{
+    width:100%;
+    border:1px solid var(--black);
+    background:var(--white);
+    padding:13px 14px;
+    font-family:var(--sans);
+    font-size:14.5px;
+    color:var(--black);
+  }
+  .field textarea{ resize:vertical; min-height:120px; }
+  .field input::placeholder,
+  .field textarea::placeholder{ color:#9a9a9a; }
+
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  @media (max-width:480px){
+    .field-row{ grid-template-columns:1fr; }
+  }
+
+  #form-status{
+    display:none;
+    margin-top:18px;
+    padding:14px 16px;
+    border:1px solid var(--black);
+    font-size:13.5px;
+  }
+  #form-status.show{ display:block; }
+
+  .info-block{
+    border:1px solid var(--black);
+    padding:30px;
+    margin-bottom:24px;
+  }
+  .info-block .eyebrow{ margin-bottom:12px; }
+  .info-block .val{ font-family:var(--serif); font-size:18px; }
+  @media (max-width:600px){
+    .info-block{ padding:22px; margin-bottom:18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="b1">Estates with Hemanth</span>
+      <span class="b2">Land &amp; Property</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="sites.html">Sites</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Get in Touch</div>
+      <h1>Let's find the right site.</h1>
+      <p class="lede">Share a little about what you're looking for, and Hemanth will personally follow up — usually within a day.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:64px;">
+    <div class="wrap contact-layout">
+
+      <div>
+        <div class="info-block">
+          <div class="eyebrow">Phone</div>
+          <div class="val"><a href="tel:+910000000000">+91 00000 00000</a></div>
+        </div>
+        <div class="info-block">
+          <div class="eyebrow">Email</div>
+          <div class="val"><a href="mailto:hello@estateswithhemanth.com">hello@estateswithhemanth.com</a></div>
+        </div>
+        <div class="info-block">
+          <div class="eyebrow">Office</div>
+          <div class="val">Indiranagar, Bengaluru — by appointment</div>
+        </div>
+        <div class="info-block">
+          <div class="eyebrow">Hours</div>
+          <div class="val">Mon – Sat, 10am – 6:30pm</div>
+        </div>
+      </div>
+
+      <div>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option>Residential Plot</option>
+              <option>Farmland</option>
+              <option>Commercial Site</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us your budget, preferred location, and timeline..." required></textarea>
+          </div>
+          <button type="submit" class="btn" style="width:100%; justify-content:center;">Send Message</button>
+          <div id="form-status"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Estates with Hemanth</div>
+      <p>Helping families and investors find verified, well-documented land across the region — one honest conversation at a time.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sites.html">Sites</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+        <li><a href="mailto:hello@estateswithhemanth.com">hello@estateswithhemanth.com</a></li>
+        <li>Bengaluru, Karnataka</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Estates with Hemanth. All rights reserved.</span>
+    <span>Built on trust, not pressure.</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
